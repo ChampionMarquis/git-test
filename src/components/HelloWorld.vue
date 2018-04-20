@@ -7,8 +7,10 @@
     </div>
     <div>
       <span>位置：</span>
-      <select name="select">
-        <option v-for="v in text.postion" :value="v">{{v}}</option>
+      <select name="select" v-model="text.postion">
+        <option selected>left</option>
+        <option>center</option>
+        <option>right</option>
       </select>
     </div>
 
@@ -27,7 +29,7 @@
         text: {
           id: 1,
           content: '这是初始内容，',
-          postion: ['left', 'center', 'right']
+          postion: 'left'
         },
         json: ''
       }
